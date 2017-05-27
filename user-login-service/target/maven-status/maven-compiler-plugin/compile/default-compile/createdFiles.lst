@@ -1,0 +1,4 @@
+com\tcs\mcoe\repository\UserRepository.class
+com\tcs\Application.class
+com\tcs\mcoe\controller\UserController.class
+com\tcs\mcoe\model\User.class
