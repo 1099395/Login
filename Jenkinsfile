@@ -3,7 +3,7 @@ node {
   stage ("Intial Preparation") {
     bat "echo Preparations are done"
   }
-   stage ("Build") {
+   stage ("Build Code") {
     bat "cd C:/chaitra/user-login-service && ${mvmHome}/bin/mvn clean package"
   }
  }
