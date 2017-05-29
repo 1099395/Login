@@ -1,6 +1,6 @@
 node {
   def mvnHome = tool 'maven3'
-  def javaHome = tool 'java8'
+  def javaHome = tool 'Java8'
   stage ("Intial Preparation") {
     bat "echo Preparations are done"
   }
