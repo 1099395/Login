@@ -9,5 +9,5 @@ node {
      bat "echo code id builded"
   }
   stage ("Build Image"){
-    
+  }
  }
