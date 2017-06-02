@@ -7,8 +7,11 @@ node {
      bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn clean package"
      
      bat "echo code id builded"
+   }
+  stage ("Build Image"){
+    bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn docker:build"
   }
-  stage ("Run code"){
-    bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn spring-boot:run"
+    stage ("Run code"){
+    bat "cd C:/chaitra/user-login-service && start ${mvnHome}/bin/mvn spring-boot:run"
   }
  }
