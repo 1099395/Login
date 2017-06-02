@@ -1,5 +1,6 @@
 node {
   def mvnHome = tool 'maven'
+  def dockerHome = 'C:/Program Files/Docker Toolbox'
   stage ("Intial Preparation") {
     bat "echo Preparations are done"
   }
@@ -11,7 +12,9 @@ node {
   stage ("Build Image"){
     bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn docker:build"
   }
-    stage ("Run code"){
-    bat "cd C:/chaitra/user-login-service && start ${mvnHome}/bin/mvn spring-boot:run"
-  }
+  stage ("Push Image"){
+    bat "cd C:/chaitra/user-login-service && ${dockerHome}/docker login --username "coe1099395" --password "Chai@123"
+  stage ("Deploy"){
+    bat"cd ${kubeHome}/  && kubectl create -f login.yml && kubectl create -f deployment.yml"
  }
+}
