@@ -6,15 +6,15 @@ node {
   }
    stage ("Build Code") {
      bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn clean package"
-     
-     bat "echo code id builded"
+     bat "echo code is builded"
    }
   stage ("Build Image"){
     bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn docker:build"
   }
   stage ("Push Image"){
-    bat "cd C:/chaitra/user-login-service && ${dockerHome}/docker login --username "coe1099395" --password "Chai@123"
-  stage ("Deploy"){
-    bat"cd ${kubeHome}/  && kubectl create -f login.yml && kubectl create -f deployment.yml"
+    bat "cd C:/chaitra/user-login-service && ${dockerHome}/docker login --username "coe1099395" --password "Chai@123" && ${dockerHome}/docker push 1099395/loginimage"
+  }
+    stage ("Deploy"){
+    bat "cd ${kubeHome}/  && kubectl create -f login.yml && kubectl create -f deployment.yml"
  }
 }
