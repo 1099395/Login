@@ -5,7 +5,7 @@ node {
     bat "echo Preparations are done"
   }
    stage ("Build Code") {
-     bat "cd C:/chaitra/ && build_package.bat"
+     bat "cd C:/chaitra/ && mvn clean package"
      bat "echo code is builded"
    }
   stage ("Build Image"){
