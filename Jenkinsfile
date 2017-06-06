@@ -5,7 +5,7 @@ node {
     bat "echo Preparations are done"
   }
    stage ("Build Code") {
-     bat "cd C:/chaitra/loginService && set JAVA_HOME=\"C:\\Program Files\\Java\\jdk1.8.0_121\" && ${mvnHome}/bin/mvn -version"
+     bat "cd C:/chaitra/ && build_package.bat"
      bat "echo code is builded"
    }
   stage ("Build Image"){
