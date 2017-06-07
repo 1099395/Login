@@ -9,7 +9,7 @@ node {
      bat "echo code is builded"
    }
   stage ("Build Image"){
-    bat "cd C:\\chaitra\\login-service && ${mvnHome}/bin/mvn docker:build"
+    bat "cd ${workspace}\\scripts && docker_build.bat ${workspace}"
   }
   
     stage ("Deploy"){
