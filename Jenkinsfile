@@ -5,11 +5,11 @@ node {
     bat "echo Preparations are done"
   }
    stage ("Build Code") {
-     bat "cd C:\\chaitra\\loginService && ${mvnHome}/bin/mvn clean package"
+     bat "cd C:\\chaitra\\login-service && ${mvnHome}/bin/mvn clean package"
      bat "echo code is builded"
    }
   stage ("Build Image"){
-    bat "cd C:/chaitra/user-login-service && ${mvnHome}/bin/mvn docker:build"
+    bat "cd C:/chaitra/login-service && ${mvnHome}/bin/mvn docker:build"
   }
   
     stage ("Deploy"){
