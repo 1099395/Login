@@ -8,7 +8,7 @@ node {
      bat "cd C:/chaitra/login-service && ${mvnHome}/bin/mvn clean package"
   }
   stage ("Build image"){
-    bat "cd C:/chaitra/login-service && ${mvnHome}/bin/mvn docker:build"
+    bat "cd C:/chaitra/login-service/scripts && docker_build.bat ${mvnHome}"
   }
     stage ("Deploy"){
     bat "cd ${kubeHome}/  && kubectl create -f login.yml && kubectl create -f deployment.yml"
