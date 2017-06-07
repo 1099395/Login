@@ -5,7 +5,7 @@ node {
     bat "echo Preparations are done"
   }
    stage ("Build Code") {
-      bat "cd C://chaitra//login-service/scripts && sh build_package.sh ${mvnHome}"
+      bat "cd C://chaitra//login-service/scripts && sh docker_build.sh ${mvnHome}"
   }
   
     stage ("Deploy"){
