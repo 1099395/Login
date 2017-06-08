@@ -20,6 +20,7 @@ node {
   }
   stage ("Deploy"){
     bat "cd ${kubeHome} && minikube start"
-    bat "cd ${kubeHome} && kubectl create -f loginimage.yml && kubectl create -f deployment.yml"
+    bat "cd ${kubeHome} && kubectl create -f deployment.yml"
+    bat "cd ${kubeHome} && kubectl create -f loginimage.yml"
  }
 }
