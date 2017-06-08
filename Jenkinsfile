@@ -6,15 +6,15 @@ node {
     git credentialsId: 'github-creds', url: 'https://github.com/1099395/Login'
   }
    stage ("Build Code") {
-     bat "cd ${workspace}\\Login && ${mvnHome}/bin/mvn clean package"
+     bat "cd ${workspace}\\user-login-service && ${mvnHome}/bin/mvn clean package"
      bat "echo code is builded"
   }
   stage ("Build image"){
-    bat "cd ${workspace}\\Login\\scripts && docker_build.bat ${mvnHome}"
+    bat "cd ${workspace}\\user-login-service\\scripts && docker_build.bat ${mvnHome}"
     bat "echo image is builded"
   }
   stage ("Push image"){
-    bat "cd cd ${workspace}\\Login\\scripts && push_image.bat ${dockerHome}"
+    bat "cd cd ${workspace}\\user-login-service\\scripts && push_image.bat ${dockerHome}"
     bat "echo image is pushed"
   }
 }
