@@ -14,7 +14,7 @@ node {
     bat "echo image is builded"
   }
   stage ("Push image"){
-    bat "cd cd ${workspace}\\user-login-service\\scripts && push_image.bat ${dockerHome}"
+    bat "cd ${workspace}\\user-login-service\\scripts && push_image.bat ${dockerHome}"
     bat "echo image is pushed"
   }
 }
