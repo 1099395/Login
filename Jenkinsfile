@@ -10,11 +10,11 @@ node {
      bat "echo code is builded"
   }
   stage ("Build image"){
-    bat "cd ${workspace}\\user-login-service\\scripts && docker_build.bat ${mvnHome}"
+    bat "cd ${workspace}\\scripts && docker_build.bat ${mvnHome}"
     bat "echo image is builded"
   }
   stage ("Push image"){
-    bat "cd ${workspace}\\user-login-service\\scripts && push_image.bat ${dockerHome}"
+    bat "cd ${workspace}\\scripts && push_image.bat ${dockerHome}"
     bat "echo image is pushed"
   }
 }
