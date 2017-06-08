@@ -1,6 +1,6 @@
 node {
   def mvnHome = tool 'maven3'
-  def dockerHome = tool 'Docker'
+  def dockerHome = 'C:\dock_test'
   stage ("Intial Preparation") {
     bat "echo Preparations are done"
   }
@@ -13,7 +13,7 @@ node {
     bat "echo image is builded"
   }
   stage ("Push image"){
-    bat "cd C:/chaitra/login-service/scripts && push_image.bat"
+    bat "cd C:/chaitra/login-service/scripts && push_image.bat ${dockerHome}"
     bat "echo image is pushed"
   }
 }
