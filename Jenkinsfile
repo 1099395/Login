@@ -1,6 +1,6 @@
 node {
   def mvnHome = tool 'maven3'
-  def dockerHome = 'C:\dock_test'
+  def dockerHome = 'C:\\dock_test'
   stage ("Intial Preparation") {
     bat "echo Preparations are done"
   }
