@@ -6,4 +6,4 @@ export DOCKER_MACHINE_NAME="default"
 export COMPOSE_CONVERT_WINDOWS_PATHS="true"
 # Run this command to configure your shell:
 # eval $("C:\Program Files\Docker Toolbox\docker-machine.exe" env default)
-%1/bin/mvn clean package
+%1/bin/mvn docker:build
