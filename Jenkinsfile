@@ -12,4 +12,8 @@ node {
     bat "cd C:/chaitra/login-service/scripts && docker_build.bat ${mvnHome}"
     bat "echo image is builded"
   }
+  stage ("Push image"){
+    bat "cd C:/chaitra/login-service/scripts && push_image.bat"
+    bat "echo image is pushed"
+  }
 }
