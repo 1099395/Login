@@ -18,5 +18,9 @@ node {
     bat "cd ${workspace}\\scripts && push_image.bat ${dockerHome}"
     bat "echo image is pushed"
   }
-  
+  stage ("Deploy"){
+    bat "cd ${kubeHome} && minikube start"
+    bat "cd ${kubeHome} && kubectl create -f deployment.yml"
+    bat "cd ${kubeHome} && kubectl create -f loginimage.yml"
+ } 
 }
