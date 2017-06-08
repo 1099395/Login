@@ -13,7 +13,7 @@ node {
     bat "echo image is builded"
   }
   stage ("Push image"){
-    bat "cd C:/chaitra/login-service/scripts && push_image.bat ${dockerHome}"
+    bat "cd C:/chaitra/login-service/scripts && push_image.bat ${mvnHome}"
     bat "echo image is pushed"
   }
 }
