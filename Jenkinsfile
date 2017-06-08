@@ -10,10 +10,9 @@ node {
   stage ("Build image"){
     bat "cd C:/chaitra/login-service/scripts && docker_build.bat ${mvnHome}"
   }
-   stage ("push image"){
+  stage ("Push image"){
     bat "cd C:/chaitra/login-service/scripts && push_image.bat"
   }
-  
     stage ("Deploy"){
     bat "cd ${kubeHome}/  && kubectl create -f login.yml && kubectl create -f deployment.yml"
  }
