@@ -1,4 +1,4 @@
-cd C:\Drishya\login-service
+cd C:\Drishya\login-service\user-login-service
 SET DOCKER_TLS_VERIFY=1
 SET DOCKER_HOST=tcp://192.168.99.100:2376
 SET DOCKER_CERT_PATH=C:\Users\1114446\.docker\machine\machines\default
