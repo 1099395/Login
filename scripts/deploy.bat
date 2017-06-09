@@ -1,5 +1,5 @@
 cd %1
 minikube start
-minikube dashboard
+minikube ip
 kubectl create -f deployment.yml
 kubectl create -f loginimage.yml
